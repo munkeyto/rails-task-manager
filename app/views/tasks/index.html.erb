@@ -1,0 +1,7 @@
+<h1>Header</h1>
+<p><%= link_to 'Create a new task', new_task_path %></p>
+<% @tasks.each do |task| %>
+  <p><%= " Marker - #{task.title} - #{task.details}" %></p>
+  <p><%= link_to 'Edit task', edit_task_path(task) %></p>
+  <p><%= link_to 'Delete task', task_path(task), method: :delete, data: { confirm: "Delete #{task.title}?" } %></p>
+<% end %>

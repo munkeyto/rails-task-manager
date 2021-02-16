@@ -1,0 +1,10 @@
+<h1>Edit task</h1>
+  <%= form_for(@task) do |f| %>
+    <%= f.label :title, "Title" %>
+    <%= f.text_field :title %>
+    <%= f.label :details, "Details" %>
+    <%= f.text_area :details %>
+    <%= f.label :completed, "Completed?" %>
+    <%= f.check_box :completed %>
+    <%= f.submit %>  
+  <% end %>
